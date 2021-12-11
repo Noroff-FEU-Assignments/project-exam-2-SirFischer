@@ -1,0 +1,22 @@
+
+@import './../../../styles/variables';
+
+.admin-contacts {
+	.admin-contacts__item {
+		border-bottom: 1px solid #e5e5e5;
+		padding: 10px;
+		word-break: break-all;
+
+		.admin_contacts_second-col {
+			.admin-contacts__is-processed {
+				display: flex;
+				flex-direction: row;
+
+				input {
+					margin-left: 10px;
+					background-color: $secondary-color;
+				}
+			}
+		}
+	}
+}

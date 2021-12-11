@@ -1,0 +1,27 @@
+@import './../../styles/variables';
+@import './../../styles/mixins';
+@import './../../styles/fonts';
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid $border-color;
+
+	@include respond_to_mobile() {
+		flex-direction: column;
+	}
+
+	a {
+		font-family: 'Comforta', cursive;
+		margin: 10px 10px;
+		text-decoration: none;
+		color: $text-primary-color;
+		&:hover {
+			color: $text-primary-color;
+		}
+		.site-name_heading {
+			min-width: 20%;
+		}
+	}
+}

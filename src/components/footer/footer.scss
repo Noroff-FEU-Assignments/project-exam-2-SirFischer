@@ -1,0 +1,47 @@
+
+footer {
+	flex-shrink: 1;
+	width: 100%;
+	min-height: 100px;
+	border-top: 1px solid #eaeaea;
+	padding: 20px;
+
+	.footer-link {
+		padding: 5px;
+		color: #666;
+		border-left: 1px solid #666;
+		padding-left: 10px;
+		margin-top: 30px;
+	}
+
+	ul {
+		list-style: square;
+		padding-left: 20px;
+		li {
+			a {
+				text-decoration: none;
+				color: #666;
+			}
+		}
+	}
+
+	.footer-contact-info {
+		p {
+			font-size: 12px;
+			color: #666;
+			margin: 0;
+			margin-left: 20px;
+		}
+	}
+
+	img {
+		z-index: -1;
+		width: 200px;
+		height: 75px;
+		margin-left: 20px;
+		margin-top: -20px;
+		object-fit: cover;
+		object-position: center;
+		cursor: pointer;
+	}
+}

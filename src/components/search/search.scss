@@ -1,0 +1,94 @@
+
+@import './../../styles/form_mixins';
+
+$search-border: 2px solid black !default;
+$search-border-radius: 4px !default;
+$search-font-size: 90% !default;
+
+//ICON
+%icon_class {
+    padding-left: 40px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAABjUlEQVRYhe2WTU4CQRCFPyGwEdcaFx4AvIO40KUoMegNCGj8uYQxnkFXRu+iO9HIiJi4MyTuxoUsBBddk26JylCNGBJeUmmYmVfvTVdNzcAEY4w0UAIugQB4kwiACzmX/ivxIvAEdPtEE9gYpnACOHEEboA9IAtMS+SAfaDmXHcsXG9E4u9AuU/SBFCRayMTXig64ksD8PKOiXWteBpb87KCXxXuI5DSGChha66pZRK4lRyb7om4yaJOPgU6CgMfwJn8VpXhAeM+qyELcpIj0JBDIWc8DMxIjtA9GLcEUx7CvTm+lDCugZasCx4GIu6LxsCVrCseBlZlvdaQtzH1q6F/DO/45jGMixTwLAkqCv6ucBsoBxFAATuK8wPwloE2pvnWtOIAc8CrY6KK2dqfkMTceVs4R77idUkUmehixusBZshkJBaBQ2zNOyKufh274nX5X8D2xG/RYAjb3iseIQVsYT6/mpjPsRC4B84x3a5uOIBZ7DYGwLxPson4WIiDnVi9DTdS7Pyn+AQjxye0yX9Iv8qNSwAAAABJRU5ErkJggg==);
+    background-position: 5px 50%;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+}
+
+@mixin content-search-base($class-name) {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    label {
+        display: block;
+        font-size: $search-font-size;
+        font-weight: 600;
+        padding-bottom: 10px;
+    }
+
+    input[type=search] {
+        width: 100%;
+        flex-grow: 1;
+        border-radius: $search-border-radius;
+        border: $search-border;
+        padding: 15px;
+        @include input-box();
+    }
+
+    .#{$class-name}-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        div {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    button {
+        width: fit-content;
+        height: 4rem - (2 * 0.125rem);
+        margin-left: 10px;
+		font-size: inherit;
+		color: white !important;
+		&:focus {
+			border: 1px solid black;
+		}
+    }
+
+
+    &.#{$class-name}-style--icon-outside
+    {
+        label {
+            padding-left: 40px;
+        }
+        .#{$class-name}-container {
+            @extend %icon_class;
+            max-width: calc(100% - 40px);
+        }
+    }
+
+
+    &.#{$class-name}-style--icon-inside {
+        input[type=search] {
+            @extend %icon_class;
+        }
+    }
+
+    &.#{$class-name}-size--small {
+        width: 200px;
+    }
+    &.#{$class-name}-size--medium {
+        width: 400px;
+    }
+    &.#{$class-name}-size--large {
+        width: 800px;
+    }
+    &.#{$class-name}-size--full {
+        width: 100%;
+    }
+}
+
+
+.component-search {
+    @include content-search-base(component-search);
+}

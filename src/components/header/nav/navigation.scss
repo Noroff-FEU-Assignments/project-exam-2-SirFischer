@@ -1,0 +1,26 @@
+
+@import "./../../../styles/mixins";
+
+.component-navigation {
+	width: 50%;
+	display: flex;
+	flex-wrap: nowrap;
+	@include respond_to_mobile() {
+		flex-wrap: wrap;
+		width: 100%;
+	}
+	.nav-item {
+		&.navigation-search-container {
+			width: 100%;
+		}
+		display: inline-block;
+		margin: 10px 10px;
+		&.component-search {
+			
+		}
+		@include respond_to_mobile() {
+			width:  100%;
+			padding: 0 10px;
+		}
+	}
+}

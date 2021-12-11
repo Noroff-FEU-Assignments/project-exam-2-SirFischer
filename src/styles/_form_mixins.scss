@@ -1,0 +1,39 @@
+@import './variables';
+
+@mixin input-box() {
+    border: 1px solid $border-color;
+    width: 100%;
+    height: 4rem - (2 * 0.125rem);
+    color: $text-primary-color;
+    background-color: #FFF; /* Old browsers */
+    background-color: $background-color;
+    font: inherit;
+    transition: color .1s ease-in-out, background-color .1s ease-in-out;
+
+    &:hover {
+        color: $input-hover-color;
+        background-color: $input-hover-background-color;
+    }
+
+    &:focus {
+        color: $input-focus-text-color;
+        background-color: $input-focus-background-color;
+        border-color: $input-focus-background-color;
+    }
+
+    &[disabled] {
+        color: $input-disabled-text-color;
+        background-color: $input-disabled-background-color;
+        cursor: not-allowed;
+    }
+
+    &[readonly] {
+        color: $input-disabled-text-color;
+        background-color: $input-disabled-background-color;
+        cursor: not-allowed;
+    }
+
+    &::-ms-clear {
+        display: none;
+    }
+}

@@ -1,0 +1,20 @@
+@import "./../../styles/form_mixins";
+
+.login_email-input {
+	@include input-box();
+}
+
+.login_password-input {
+	@include input-box();
+}
+
+.login-status {
+	margin: 10px 0;
+	.h4 {
+		font-size: medium;
+	}
+}
+
+.login-button {
+	margin-top: 10px;
+}

@@ -1,0 +1,23 @@
+@import './../../styles/variables.scss';
+
+.contact-buttons {
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	z-index: 2;
+	button {
+		width: 200px;
+		right: 0px;
+		display: block;
+		color: white !important;
+		font-size: 15px;
+	}
+}
+
+.content-modal-footer {
+	padding-top: 40px;
+	button {
+		margin-right: 10px;
+		color: white !important;
+	}
+}
