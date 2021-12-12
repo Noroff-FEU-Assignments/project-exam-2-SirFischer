@@ -45,7 +45,7 @@ export function Hotel({...props}: IHotelProps): JSX.Element {
 							<Col sm={11}>{hotel?.Location}</Col>
 						</Row>
 						<Row className="hotel-description-map" >
-							<iframe src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyD3iSV4drDu0_N3a3kEIri1ZEy7ODs59GU&q=${hotel?.Location}`} width="600" height="450" allowFullScreen loading="lazy" />
+							<iframe title="googleMapEmbedded" src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyD3iSV4drDu0_N3a3kEIri1ZEy7ODs59GU&q=${hotel?.Location}`} width="600" height="450" allowFullScreen loading="lazy" />
 						</Row>
 					</Container>
 				</Col>

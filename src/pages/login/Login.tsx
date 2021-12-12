@@ -38,7 +38,7 @@ export function Login({ ...props }: ILoginProps): JSX.Element {
 			<Row className="justify-content-md-center">
 				<Form onSubmit={login}>
 					<Form.Group controlId="LoginEmail" >
-						<Form.Label>Email address</Form.Label>
+						<Form.Label>E-post</Form.Label>
 						<Form.Control 
 							className="login_email-input"
 							type="email"
@@ -46,12 +46,9 @@ export function Login({ ...props }: ILoginProps): JSX.Element {
 							placeholder="Enter email"
 							onChange={(event) => {setMail(event.target.value);}}
 						/>
-						<Form.Text className="text-muted">
-							We'll never share your email with anyone else.
-						</Form.Text>
 					</Form.Group>
 					<Form.Group controlId="LoginPassword">
-						<Form.Label>Password</Form.Label>
+						<Form.Label>Passord</Form.Label>
 						<Form.Control
 							className="login_password-input"
 							type="password"
@@ -65,7 +62,7 @@ export function Login({ ...props }: ILoginProps): JSX.Element {
 						<Alert.Heading>{loginFeedback}</Alert.Heading>
 					</Alert>}
 					<Button variant="primary" type="submit" className="login-button">
-						Submit
+						Logg inn
 					</Button>
 				</Form>
 			</Row>

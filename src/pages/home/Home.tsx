@@ -3,10 +3,8 @@ import { Col, Container, Image, Row } from 'react-bootstrap'
 import Button from '../../components/button/Button';
 import { Collection } from '../../components/collection/Collection';
 import ContactButton from '../../components/contactForm/ContactButton';
-import HotelCard from '../../components/hotelCard/HotelCard';
 import { Search } from '../../components/search/Search'
 import { GetSuggestions, SearchRedirect } from '../../controllers/search/Search'
-import { IHotelModel } from '../../models/hotel/Hotel.model';
 
 import './home.scss';
 
